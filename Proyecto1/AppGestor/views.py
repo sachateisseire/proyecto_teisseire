@@ -30,3 +30,27 @@ def personal(self):
 
 def expedientes(self):
     return HttpResponse ('vista expedientes')
+
+def departamentosFormulario(request):
+
+    if request.method == 'POST':
+
+        departamento = Departamentos(request.POST['reparticion'])
+
+        departamento.save()
+
+        return render(request, "AppGestor/departamentosFormulario.html")
+
+    return render(request, "AppGestor/departamentosFormulario.html")
+
+def departamentosFormularioPost(request):
+
+    print('------------------')
+    print(request.post)
+
+    mi_departamento = Departamentos(id='', reparticion=reparticion)
+    mi_departamento.save()
+
+    return render(request, 'AppGestor/departamentos.html', {'reparticion': reparticion})
+    
+    # return render(request, "AppGestor//inicio.html")

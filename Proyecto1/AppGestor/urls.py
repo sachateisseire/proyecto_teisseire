@@ -1,7 +1,7 @@
 from django import views
 from django.urls import path
 
-from .views import Departamentos, buscador, ingresar, inicio
+from .views import Departamentos, buscador, departamentosFormulario, ingresar, inicio
 
 urlpatterns = [
 
@@ -9,4 +9,7 @@ urlpatterns = [
     path('test/', Departamentos),
     path('ingresar/', ingresar, name="Ingresar"),
     path('buscador/',  buscador, name="Buscador"),
+    path('departamentosFormulario', departamentosFormulario, name="departamentosFormulario")
+
 ]
+

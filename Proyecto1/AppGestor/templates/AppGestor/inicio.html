@@ -25,6 +25,9 @@
                 <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
                 <a class="navbar-brand" href="{% url 'Ingresar' %}">Ingresar</a>
                 <a class="navbar-brand" href="{% url 'Buscador' %}">Buscador</a>
+                <a class="navbar-brand" href="{% url 'Buscador' %}">Carga Departamentos</a>
+                <a class="navbar-brand" href="{% url 'Buscador' %}">Carga Personal</a>
+                <a class="navbar-brand" href="{% url 'Buscador' %}">Carga Expedientes</a>
                 <a class="btn btn-primary" href="#signup">Login</a>
             </div>
         </nav>
@@ -71,10 +74,8 @@
 
         
         {% block contenidoQueCambia %}
-            
-        <p>testing inicio</p>
 
-        {% endblock contenidoQueCambia %}
+        {% endblock %}
             
 
         <!-- Footer-->

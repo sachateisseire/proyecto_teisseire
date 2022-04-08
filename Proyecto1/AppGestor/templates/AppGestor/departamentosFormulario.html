@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "AppGestor/inicio.html" %}
+        {% load static %}
+    {% block contenidoQueCambia %}
 
-    <form action="/AppGestor/departamentosFormulario" method="POST"> {% csrf_token %}
+    {% if miFormulario.errors %}
+    <p style="color: red;">Estan mal los datos ingresados.</p>
+    {% endif %}
 
-        <p>Departamento: <input type="text" name="reparticion"></p>
+    <form action="" method="POST"> {% csrf_token %}
+        <h1>DEPARTAMENTOS</h1>
+        
+        <table>
+            {{ miFormulario.as_table }}
+        </table>
 
         <input type="submit" value="Enviar"> 
 
     </form>
-    
-</body>
-</html>
+    {% endblock %}
